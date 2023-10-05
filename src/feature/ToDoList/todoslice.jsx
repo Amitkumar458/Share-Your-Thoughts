@@ -1,12 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+if(localStorage.getItem('lists') === null){
+    localStorage.setItem('lists' , JSON.stringify([{name:"Example of Tasks" , type:true} , {name:"Tasks Completed" , type:false}]));
+}
+
 const todoSlice = createSlice({
     name:"listdata",
-    initialState:[{name:"Amit kumar" , type:true}],
+    initialState:JSON.parse(localStorage.getItem('lists')),
     reducers:{
         addlist:{
             reducer(state , action){
                 state.push(action.payload);
+                localStorage.setItem('lists' , JSON.stringify(state));
             },
             prepare(name , type){
                 return {
@@ -24,6 +29,7 @@ const todoSlice = createSlice({
                 state.splice(action.payload.id , 1);
                 state.push({name:action.payload.name , type:false});
             }
+            localStorage.setItem('lists' , JSON.stringify(state));
         },
         clearlist(state){
             state = [];

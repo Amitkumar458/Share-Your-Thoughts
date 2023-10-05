@@ -32,7 +32,124 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.box {
+  border-radius: 23px;
+  background: linear-gradient(145deg, #313131, #292929);
+  box-shadow: 33px 33px 52px #121212,
+    -15px -15px 52px #4a4a4a;
+  margin-top: 12px;
+  width: 70%;
+}
+
+.btn2 {
+  color: #8707ff;
+  border: 2px solid #8707ff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 80%;
+  height: 20px;
+  margin-bottom: 30px;
+  color: white;
+  font-size: large;
+  background: transparent;
+ }
+ 
+ .btn2:active {
+  box-shadow: 2px 2px 15px #8707ff inset;
+ }
+
+.btn3 {
+  color: #8707ff;
+  border: 2px solid #8707ff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 80%;
+  height: 100px;
+  color: white;
+  font-size: large;
+  font-size: large;
+  background: transparent;
+ }
+ 
+ .btn3:active {
+  box-shadow: 2px 2px 15px #8707ff inset;
+ }
+ 
+.inputbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn4 {
+  background-color: #544c4c;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 30px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  margin: 15px;
+ }
+ 
+ .btn4:hover {
+  background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
+  animation: slidernbw 5s linear infinite;
+  color: #000;
+ }
+ 
+ @keyframes slidernbw {
+  to {
+   background-position: 20vw;
+  }
+ }
+
+ .card {
+  width: 80%;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(#212121, #212121) padding-box,
+  linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  margin-top: 15px;
+}
+
+.card .main-content {
+  flex: 1;
+}
+
+.card .header span:first-child {
+  font-weight: 600;
+  color: #717171;
+  margin-right: 4px;
+}
+
+.card .heading {
+  font-size: 20px;
+  margin: 12px 0 16px;
+  font-weight: 600;
+}
+
+
+.card .footer {
+  font-weight: 600;
+  color: #717171;
+  margin-right: 4px;
+  margin-top: 20px;
+}
+
+.card:hover {
+  transform: scale(1.01);
 }
