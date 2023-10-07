@@ -6,8 +6,8 @@ const Posts = () => {
     const posts = useSelector((state) => state.postSlice);
     console.log(posts);
   return (
-    <div className='main'>
-        <h1 style={{color:"#ff4d00"}}>Welcome to Amit Web</h1>
+    <div className='main App' style={{background:'black' , color:'white'}}>
+        <h1 style={{color:"#ff4d00"}}>Share Your Thoughts</h1>
         <div className='box App'>
             <h2 style={{color:"red"}}>Create Your Post</h2>
             <form>

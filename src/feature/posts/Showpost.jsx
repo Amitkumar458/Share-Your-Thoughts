@@ -2,18 +2,18 @@ import React from 'react'
 
 const Showpost = ({name , description , date , title}) => {
     return (
-        <div class="card">
-            <div class="main-content">
-                <div class="header">
+        <div className="card">
+            <div className="main-content">
+                <div className="header">
                     <span>Article on</span>
                     <span>{date}</span>
                 </div>
-                <p class="heading">{title}</p>
-                <div class="categories">
+                <p className="heading">{title}</p>
+                <div className="categories">
                     {description}
                 </div>
             </div>
-            <div class="footer">
+            <div className="footer">
                 by {name}
             </div>
         </div>
