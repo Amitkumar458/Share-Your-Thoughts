@@ -156,20 +156,22 @@
 
 
 /* to-do list css code */
-.lists {
-  font-size: 25px;
+.group {
   display: flex;
-  margin: 3px;
+}
+
+.lists {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin: 3px;
+  font-size: 22px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
  
 .listshow {
   padding-top: 5px;
-}
-
-.group {
-  display: flex;
+  width: 290;
 }
 
 .box2 {
@@ -202,3 +204,19 @@
   font-size: 14px;
   color: #5264AE;
  }
+
+  
+ .btntodo {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  background: red;
+  border: none;
+  border-radius: 10px;
+}
+
+.button1 {
+  border-radius: 5px;
+  background: linear-gradient(145deg, #f18f8f, #f0f0f0);
+  box-shadow: 5px 5px 7px #b1b1b1,
+    -5px -5px 7px #c3fab2;
+}
