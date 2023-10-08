@@ -6,6 +6,7 @@ const Posts = () => {
     const posts = useSelector((state) => state.postSlice);
     console.log(posts);
   return (
+    // Amit baklol hai 
     <div className='main App' style={{background:'black' , color:'white'}}>
         <h1 style={{color:"#ff4d00"}}>Share Your Thoughts</h1>
         <div className='box App'>
@@ -25,6 +26,7 @@ const Posts = () => {
         {posts.map((item , id) => {
             return <Showpost key={id} title={item.title} description={item.description} date={item.date} name={item.name}/>;
         })}
+        <footer>This is a footer</footer>
     </div>
   )
 }
