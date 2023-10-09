@@ -1,24 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Showpost from './Showpost';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import CreatePost from './CreatePost';
+import { fetchPost } from './postSlice';
+
 
 const Posts = () => {
-    const posts = useSelector((state) => state.postSlice);
+    const dispatch = useDispatch()
+    const posts = useSelector((state) => state.postSlice.posts);
+
+    useEffect(()=>{
+        dispatch(fetchPost())
+    },[dispatch])
     console.log(posts);
   return (
-    // Amit baklol hai 
-    <div className='main App' style={{background:'black' , color:'white'}}>
-        <h1 style={{color:"#ff4d00"}}>Share Your Thoughts</h1>
+    <div className='main'>
+        <h1 style={{color:"#ff4d00"}}>Welcome to Amit Web</h1>
         <div className='box App'>
             <h2 style={{color:"red"}}>Create Your Post</h2>
-            <form>
-                <input type="text" name="name" placeholder='Enter Your Name' className='btn2' required/>
-                <input type="text" name="title" placeholder='Enter Your title' className='btn2' required/>
-                <textarea type="text" name="description" placeholder='Enter Your Description' className='btn3' required/>
-                <div>
-                    <button type="submit" className='btn4'> Post </button>
-                </div>
-            </form>
+           <CreatePost/>
         </div>
         <h1>
             Posts by peoples
@@ -26,7 +26,6 @@ const Posts = () => {
         {posts.map((item , id) => {
             return <Showpost key={id} title={item.title} description={item.description} date={item.date} name={item.name}/>;
         })}
-        <footer>This is a footer</footer>
     </div>
   )
 }
