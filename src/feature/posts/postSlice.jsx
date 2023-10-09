@@ -72,15 +72,14 @@ const postSlice = createSlice({
         state.error = action.payload.error
     },
     // for creating 
-    [fetchPost.pending]: (state)=>{
+    [createPost.pending]: (state)=>{
         state.loading = true
     },
-    [fetchPost.fulfilled]: (state,action)=>{
+    [createPost.fulfilled]: (state,action)=>{
         state.loading = false
-        state.posts =[]
         state.posts.push(...action.payload.data.rows)
     },
-    [fetchPost.rejected]: (state,action)=>{
+    [createPost.rejected]: (state,action)=>{
         state.loading = false
         state.error = action.payload.error
     },
